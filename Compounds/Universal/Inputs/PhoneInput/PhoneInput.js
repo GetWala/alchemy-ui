@@ -84,7 +84,11 @@ class PhoneInput extends Component {
           />
           <TouchableOpacity
             style={styles.icon}
-            onPress={() => { this.input.focus(); }}
+            onPress={() => { 
+              InteractionManager.runAfterInteractions(() => {
+                this.input.focus(); 
+              })
+            }}
           >
             <Icons
               iconSet={'material-design'}
