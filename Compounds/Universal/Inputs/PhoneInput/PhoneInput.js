@@ -55,10 +55,7 @@ class PhoneInput extends Component {
             requiredCountries={countries}
             onChange={(value) => {
               onChangeCountry(value);
-
-              InteractionManager.runAfterInteractions(() => {
                 this.focus();
-              });
             }}
             pickerIcon={<Icons
               iconSet={'material-design'}
@@ -85,9 +82,7 @@ class PhoneInput extends Component {
           <TouchableOpacity
             style={styles.icon}
             onPress={() => { 
-              InteractionManager.runAfterInteractions(() => {
                 this.input.focus(); 
-              })
             }}
           >
             <Icons
